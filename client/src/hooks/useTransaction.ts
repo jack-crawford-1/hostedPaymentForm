@@ -8,7 +8,7 @@ function useTransaction() {
   const [searchParams] = useSearchParams();
 
   useEffect(() => {
-    const id = searchParams.get("id") || "";
+    const id = searchParams.get("transaction_id") || "";
     const merchantSession = searchParams.get("merchant_session") || "";
     const amount = searchParams.get("amount")
       ? Number(searchParams.get("amount"))
