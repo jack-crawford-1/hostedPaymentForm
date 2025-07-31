@@ -14,7 +14,7 @@ const InputField = ({
         name={name}
         value={value}
         onChange={onChange}
-        className="w-full p-2 border text-slate-800 font-bold rounded-sm shadow-sm shadow-gray-800/30"
+        className="w-full p-2 border text-slate-800 font-regular rounded-sm shadow-sm shadow-gray-800/30"
         required
       >
         <option value="" disabled>
@@ -36,7 +36,7 @@ const InputField = ({
       value={value}
       onChange={onChange}
       placeholder={placeholder}
-      className="w-full p-2 border  text-slate-800 font-bold rounded-sm shadow-sm shadow-gray-800/30"
+      className="w-full p-2 border  text-slate-800 font-regular rounded-sm shadow-sm shadow-gray-800/30"
       required
     />
   );

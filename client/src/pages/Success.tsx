@@ -9,9 +9,9 @@ function Success() {
     : null;
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 to-gray-800">
-      <div className="bg-white p-8 rounded-lg text-center lg:w-1/3">
-        <h1 className="text-green-600 text-3xl font-extrabold mb-4">
+    <div className="min-h-screen flex items-center justify-center bg-black ">
+      <div className="bg-white p-8 rounded-lg text-center lg:w-1/4">
+        <h1 className="text-green-600 text-3xl font-extrabold mb-4 uppercase">
           Payment Successful!
         </h1>
 

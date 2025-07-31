@@ -5,10 +5,8 @@ const PaymentForm = () => {
   const { formData, handleChange, handleSubmit } = usePaymentForm();
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 w-full text-sm">
+    <form onSubmit={handleSubmit} className="space-y-2 w-full text-sm">
       <div className="grid grid-cols-1 gap-2 font-normal text-slate-800">
-        <div className="border-t-4 w-full border-gray-800 mt-2"></div>
-
         <div className="mb-[-3px] mt-5 font-bold">
           Paystation ID{" "}
           <span className="font-medium text-xs">
@@ -56,7 +54,7 @@ const PaymentForm = () => {
           placeholder="Merchant Session"
           onChange={handleChange}
         />
-        <div className="mb-[-3px] font-bold">
+        <div className="mb-[-3px] font-semibold">
           Merchant Reference (not normally required - all input fields set with
           required)
         </div>
@@ -67,7 +65,7 @@ const PaymentForm = () => {
           placeholder="merchant_reference"
           onChange={handleChange}
         />
-        <div className="mb-[-3px] font-bold ">
+        <div className="mb-[-3px] font-semibold ">
           Amount <span className="font-medium text-xs">(cents - min 100) </span>
         </div>
         <InputField
@@ -87,55 +85,55 @@ const PaymentForm = () => {
         />
       </div>
 
-      <div className="bg-gray-600 text-slate-100 p-10 pt-4 pb-4">
+      <div className="bg-black rounded-md text-slate-100 p-10 pt-4 pb-4">
         <div className="mb-[-3px]">
           Test Mode:{" "}
-          <span className="text-slate-200 font-bold uppercase">
+          <span className="text-slate-200 font-regular uppercase">
             {" "}
             {formData.test_mode ? "true" : "false"}
           </span>
         </div>
         <div className="mb-[-3px]">
           Location:{" "}
-          <span className="text-slate-200 font-bold uppercase">
+          <span className="text-slate-200 font-regular uppercase">
             {formData.retailer_location}
           </span>
         </div>
 
         <div className="mb-[-3px]  ">
           Merchant Reference:{" "}
-          <span className="text-slate-200 font-bold uppercase">
+          <span className="text-slate-200 font-regular uppercase">
             {formData.merchant_reference}
           </span>
         </div>
 
         <div className="mb-[-3px]">
           ID:{" "}
-          <span className="text-slate-200 font-bold uppercase">
+          <span className="text-slate-200 font-regular uppercase">
             {formData.paystation_id}
           </span>
         </div>
         <div className="mb-[-3px]">
           Gateway:{" "}
-          <span className="text-slate-200 font-bold">
+          <span className="text-slate-200 font-regular">
             {formData.gateway_id}
           </span>
         </div>
         <div className="mb-[-3px]">
           Merch Session:{" "}
-          <span className="text-slate-200 font-bold">
+          <span className="text-slate-200 font-regular">
             {formData.merchant_session}
           </span>
         </div>
         <div className="mb-[-3px]">
           Merch Ref:{" "}
-          <span className="text-slate-200 font-bold">
+          <span className="text-slate-200 font-regular">
             {formData.merchant_reference}
           </span>
         </div>
         <div className="mb-[-3px]">
           Amount (cents):{" "}
-          <span className="text-slate-200 font-bold">
+          <span className="text-slate-200 font-regular">
             {formData.currency} {formData.amount}
           </span>
         </div>
@@ -143,7 +141,7 @@ const PaymentForm = () => {
 
       <button
         type="submit"
-        className="w-[160px] bg-slate-600 text-white px-4 py-2 rounded-lg shadow-md text-lg font-semibold hover:bg-green-700 transition-all"
+        className="w-[160px] bg-black text-white px-4 py-2 rounded-lg shadow-md text-lg font-semibold hover:bg-green-700 transition-all"
       >
         Submit
       </button>
