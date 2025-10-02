@@ -7,11 +7,11 @@ export function usePaymentForm() {
     return `merchant_session_${Math.random().toString(36).substring(2, 15)}`;
   };
 
-  const [formData, setFormData] = useState<HostedPurchaseRequest>({
-    paystation_id: "",
-    gateway_id: "",
+  const [formData, setFormData] = useState<
+    Omit<HostedPurchaseRequest, "paystation_id" | "gateway_id">
+  >({
     merchant_session: "",
-    amount: 100,
+    amount: 1000,
     currency: "",
     test_mode: true,
     return_url: "",

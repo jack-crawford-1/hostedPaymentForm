@@ -2,8 +2,13 @@ import { HostedPurchaseRequest, HostedPurchaseResponse } from "../types/types";
 
 const LOCAL_PROXY_URL = "http://localhost:3000/api/proxy/purchase";
 
+type ClientPurchaseRequest = Omit<
+  HostedPurchaseRequest,
+  "paystation_id" | "gateway_id"
+>;
+
 export async function requestHostedPurchase(
-  data: HostedPurchaseRequest
+  data: ClientPurchaseRequest
 ): Promise<HostedPurchaseResponse> {
   try {
     const response = await fetch(LOCAL_PROXY_URL, {
