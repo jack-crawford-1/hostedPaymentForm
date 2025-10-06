@@ -1,0 +1,45 @@
+# A name for your workflow. This will be displayed in the Actions tab.
+name: Node.js CI
+
+# This section defines when the workflow will run.
+on:
+  # Triggers the workflow on push events for the "main" branch.
+  push:
+    branches: [ "main" ]
+  # Triggers the workflow on pull request events for the "main" branch.
+  pull_request:
+    branches: [ "main" ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel.
+jobs:
+  # This workflow contains a single job called "build".
+  build:
+    # The type of machine to run the job on. "ubuntu-latest" is a good default.
+    runs-on: ubuntu-latest
+
+    # A strategy for running the job with different versions of Node.js.
+    strategy:
+      matrix:
+        # We will test against Node.js version 20.x. You can add more versions here.
+        node-version: [20.x]
+
+    # Steps represent a sequence of tasks that will be executed as part of the job.
+    steps:
+      # Step 1: Checks out your repository's code so the job can access it.
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Sets up the specified version of Node.js.
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm' # This will cache your npm dependencies for faster builds.
+
+      # Step 3: Installs the project dependencies using npm.
+      - name: Install dependencies
+        run: npm install
+
+      # Step 4: Runs the tests. It assumes you have a "test" script in your package.json.
+      - name: Run tests
+        run: npm test
