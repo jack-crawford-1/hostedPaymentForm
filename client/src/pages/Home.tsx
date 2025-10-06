@@ -3,28 +3,28 @@ import paystationLogo from "../../../assets/paystation-logo.svg";
 
 function Home() {
   return (
-    <div className="min-h-screen flex flex-row items-center justify-center bg-black p-8">
+    <div className="min-h-screen flex flex-row items-center justify-center bg-black p-8 gap-20">
       <div className="w-full flex flex-col items-center">
         <img
           src={paystationLogo}
-          width="600"
+          width="400"
           height="200"
           alt="Paystation Logo"
         />
         <div className="text-start ml-40">
-          <p className=" text-sm tracking-widest text-gray-300 mt-10">
+          <p className=" text-xs tracking-widest text-gray-400 mt-10">
             V1/hosted/purchases + /oauth/token
           </p>
-          <p className=" text-sm tracking-widest text-gray-300">
+          <p className=" text-xs tracking-widest text-gray-400">
             Multi FX Visa/ MC + POLi
           </p>
-          <p className=" text-sm tracking-widest text-gray-300">
+          <p className=" text-xs tracking-widest text-gray-400">
             Styled hosted theme (paystation hosted page)
           </p>
-          <p className=" text-sm tracking-widest text-gray-300">
+          <p className=" text-xs tracking-widest text-gray-400">
             React.js - Vite - Typescript - TailwindCSS - Express
           </p>
-          <p className=" text-sm tracking-widest text-gray-300">
+          <p className=" text-xs tracking-widest text-gray-400">
             Backend .env file with Paystation ID, Gateway ID, Client ID, Client
             Secret
           </p>

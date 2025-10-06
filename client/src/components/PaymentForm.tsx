@@ -7,7 +7,7 @@ const PaymentForm = () => {
   return (
     <form onSubmit={handleSubmit} className="space-y-1 w-full text-sm ">
       <div className="grid grid-cols-1 gap-2 font-normal text-slate-300">
-        <div className="mb-[-3px] font-bold text-xl">Location</div>
+        <div className="mb-[-3px] font-bold text-md">Location</div>
         <InputField
           type="dropdown"
           name="retailer_location"
@@ -20,7 +20,7 @@ const PaymentForm = () => {
             { value: "FOREIGN_AND_DOMESTIC", label: "Foreign and Domestic" },
           ]}
         />
-        <div className="mb-[-3px] font-bold text-xl">
+        <div className="mb-[-3px] font-bold text-md">
           {" "}
           Merchant Session{" "}
           <span className="font-medium text-xs"> - autogen - editable</span>
@@ -32,7 +32,7 @@ const PaymentForm = () => {
           placeholder="Merchant Session"
           onChange={handleChange}
         />
-        <div className="mb-[-3px] font-semibold text-xl">
+        <div className="mb-[-3px] font-semibold text-md">
           Merchant Reference{" "}
           <span className="font-medium text-xs">
             (not normally required - all input fields set with required)
@@ -45,7 +45,7 @@ const PaymentForm = () => {
           placeholder="merchRef123"
           onChange={handleChange}
         />
-        <div className="mb-[-3px] font-semibold text-xl">
+        <div className="mb-[-3px] font-semibold text-md">
           Amount <span className="font-medium text-xs">(cents - min 100) </span>
         </div>
         <InputField
@@ -55,7 +55,7 @@ const PaymentForm = () => {
           placeholder="Amount (in cents)"
           onChange={handleChange}
         />
-        <div className="mb-[-3px] font-bold text-xl text-xl">Currency</div>
+        <div className="mb-[-3px] font-bold  text-md">Currency</div>
         <InputField
           type="text"
           name="currency"
