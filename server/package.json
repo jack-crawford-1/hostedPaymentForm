@@ -14,7 +14,7 @@
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
     "client": "npm run dev --prefix ../client",
-    "fullstack": "concurrently \"npm run dev\" \"npm run client\""
-
+    "fullstack": "concurrently \"npm run dev\" \"npm run client\"",
+    "test": "echo \"No server tests yet\" && exit 0"
   }
 }
