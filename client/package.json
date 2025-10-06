@@ -8,8 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-        "fullstack": "concurrently \"npm run dev\" \"npm run client\""
-
+    "fullstack": "concurrently \"npm run dev\" \"npm run client\"",
+    "test": "echo \"No client tests yet\" && exit 0"
   },
   "dependencies": {
     "react": "^18.3.1",
