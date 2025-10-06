@@ -10,9 +10,9 @@ function Success() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-black ">
-      <div className="bg-white p-8 rounded-lg text-center lg:w-1/4">
-        <h1 className="text-green-600 text-3xl font-extrabold mb-4 uppercase">
-          Payment Successful!
+      <div className="bg-white p-8 rounded-lg text-center lg:w-full h-screen">
+        <h1 className="text-green-600 text-3xl font-extrabold mb-4 uppercase mt-40">
+          Payment Successful
         </h1>
 
         {transaction ? (
@@ -56,7 +56,7 @@ function Success() {
 
         <button
           onClick={() => downloadReceiptAsText(transaction)}
-          className="mt-6 w-4/5 px-6 py-3 bg-slate-800 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-green-700 transition-all"
+          className="mt-6 w-1/5 px-6 py-3 bg-slate-800 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-green-700 transition-all"
         >
           📄 Download Receipt (.txt)
         </button>
