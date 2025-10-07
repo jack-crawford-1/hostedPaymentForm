@@ -55,7 +55,9 @@ const PaymentForm = () => {
           placeholder="Amount (in cents)"
           onChange={handleChange}
         />
-        <div className="mb-[-3px] font-bold  text-md">Currency</div>
+        <div className="mb-[-3px] font-bold  text-md">
+          Currency (NZD, AUD, USD, ZAR)
+        </div>
         <InputField
           type="text"
           name="currency"
