@@ -7,6 +7,8 @@ export function usePaymentForm() {
     return `merchant_session_${Math.random().toString(36).substring(2, 15)}`;
   };
 
+  const responseUrl = import.meta.env.VITE_RESPONSE_URL;
+
   const [formData, setFormData] = useState<
     Omit<HostedPurchaseRequest, "paystation_id" | "gateway_id">
   >({
@@ -15,6 +17,7 @@ export function usePaymentForm() {
     currency: "",
     test_mode: true,
     return_url: "",
+    response_url: responseUrl,
     retailer_location: undefined,
     merchant_reference: "",
   });

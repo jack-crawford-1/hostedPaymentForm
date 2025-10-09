@@ -8,7 +8,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+import captureRoutes from './routes/captureRoutes.js';
+
 app.use('/api/proxy', purchaseRoutes);
+app.use('/api/capture', captureRoutes);
 app.use(errorHandler);
 
 export default app;

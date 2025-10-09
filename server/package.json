@@ -16,5 +16,8 @@
     "client": "npm run dev --prefix ../client",
     "fullstack": "concurrently \"npm run dev\" \"npm run client\"",
     "test": "echo \"No server tests yet\" && exit 0"
+  },
+  "devDependencies": {
+    "ngrok": "^5.0.0-beta.2"
   }
 }

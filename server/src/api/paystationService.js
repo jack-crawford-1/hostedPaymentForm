@@ -16,8 +16,14 @@ export async function createHostedPurchase(purchaseData) {
     });
 
     if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(errorData.message || "Failed to create hosted purchase");
+      const contentType = response.headers.get("content-type");
+      if (contentType && contentType.indexOf("application/json") !== -1) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || "Failed to create hosted purchase");
+      } else {
+        const errorText = await response.text();
+        throw new Error(errorText || "Failed to create hosted purchase");
+      }
     }
 
     const data = await response.json();
